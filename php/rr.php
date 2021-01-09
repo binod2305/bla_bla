@@ -11,7 +11,7 @@
 <body>
     <center>
         <form action="" method="POST">
-            <input name = "sr_no" type="text" placeholder="serial number"/> <br>
+            <input name = "sr_no" type="text " placeholder="serial number"/> <br>
             <input type="submit" name="search" value="Search Serial Number">
         </form>
     </center>
