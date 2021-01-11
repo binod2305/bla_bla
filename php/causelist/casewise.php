@@ -13,17 +13,18 @@
     <center>
     <h3>Case Number Wise</h3>
         <form action="" method="POST">
-        <label>Case Nature</label>
+        <label>Case Nature</label><br>
         <select name="date" id="cars">
-            <option value="2021-01-01">2021-01-04</option>
-            <option value="2021-01-01">2021-01-03</option>
-            <option value="2021-01-01">2021-01-02</option>
+            <option value="">None</option>
+            <option value="2021-01-04">2021-01-04</option>
+            <option value="2021-01-03">2021-01-03</option>
+            <option value="2021-01-02">2021-01-02</option>
             <option value="2021-01-01">2021-01-01</option>
         </select>
         <br><br>
-        <label>Case Number</label>
+        <label>Case Number</label><br>
             <input name = "caseno" type="text " placeholder="serial number"/> <br>
-            <label>Year</label>
+            <label>Year</label><br>
             <input name = "year" type="text " placeholder="serial number"/> <br>
             <input type="submit" name="search" value="Search">
         </form>

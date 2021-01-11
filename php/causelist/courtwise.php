@@ -13,7 +13,7 @@
     <center>
     <h3>Case Number Wise</h3>
         <form action="" method="POST">
-        <label>Case Nature</label>
+        <label>Case Nature</label> <br>
         <select name="date" id="cars">
             <option value="2021-01-01">2021-01-04</option>
             <option value="2021-01-01">2021-01-03</option>
@@ -21,10 +21,23 @@
             <option value="2021-01-01">2021-01-01</option>
         </select>
         <br><br>
-        <label>Court Number</label>
-            <input name = "courtno" type="text " placeholder="serial number"/> <br>
-            <label>Year</label>
-            <input name = "year" type="text " placeholder="serial number"/> <br>
+        <label>Court Number</label><br>
+        <select name="courtno" id="cars">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <br>
+        <br>
             <input type="submit" name="search" value="Search">
         </form>
     </center>
@@ -39,9 +52,8 @@ $connection = mysqli_connect("localhost:3307","root","");
 $db = mysqli_select_db($connection, "testing");
 if(isset($_POST['search'])){
     $id1 = $_POST['date'];
-    $id2 = $_POST['caseno'];
-    $id3 = $_POST['year'];
-    $query = "SELECT * FROM checking where YEARREG = '$id3' AND DATECASE = '$id1' AND CASENO = '$id2'";
+    $id2 = $_POST['courtno'];
+    $query = "SELECT * FROM checking where DATECASE = '$id1' AND COURTNO = '$id2'";
     $query_run = mysqli_query($connection,$query);
     ?>
         <?php
@@ -50,11 +62,6 @@ if(isset($_POST['search'])){
                 ?>
         <div class="container">
         <table>
-            <tr>
-                <th>Serial Number</th>
-                <th><?php echo $row['SRNO'] ?></th>
-            </tr>
-            <tr>
                 <th>Case  Number</th>
                 <th><?php echo $row['CASENO'] ?></th>
             </tr>
@@ -90,6 +97,8 @@ if(isset($_POST['search'])){
                 <th>Petitioner AOR Number</th>
                 <th><?php echo $row['PETAOR'] ?></th>
             </tr>
+            <br>
+            <br>
             <br>
             
         </table>
