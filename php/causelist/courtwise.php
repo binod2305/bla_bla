@@ -21,8 +21,8 @@
             <option value="2021-01-01">2021-01-01</option>
         </select>
         <br><br>
-        <label>Case Number</label>
-            <input name = "caseno" type="text " placeholder="serial number"/> <br>
+        <label>Court Number</label>
+            <input name = "courtno" type="text " placeholder="serial number"/> <br>
             <label>Year</label>
             <input name = "year" type="text " placeholder="serial number"/> <br>
             <input type="submit" name="search" value="Search">
